@@ -1,1 +1,41 @@
+.wrapper {
+    width:600px;
+    background:#eee;
+    margin: 0 auto 0 auto;
+}
 
+.heading {
+    height: 100px;
+    background: red;
+    padding: 20px;
+    text-align: center;
+}
+
+.navigation {
+    height: 50px;
+    background:lightgreen;
+
+}
+
+.content {
+    min-height: 400px;
+    background: #ddd;
+    width: 400px;
+    float: left;
+}
+
+.sidebar {
+    width: 200px;
+    float: right;
+    background: lightblue;
+    min-height: 400px;
+}
+
+.footer {
+    clear: both;
+    background: black;
+    height: 50px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
