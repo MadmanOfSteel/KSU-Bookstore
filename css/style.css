@@ -1,41 +1,48 @@
 .wrapper {
-    width:600px;
+    width:100%;
     background:#eee;
     margin: 0 auto 0 auto;
 }
 
 .heading {
     height: 100px;
-    background: red;
+    background: black;
     padding: 20px;
-    text-align: center;
+    color: white;
+    text-align: right;
 }
 
 .navigation {
-    height: 50px;
+    height: 41px;
     background:lightgreen;
 
 }
 
 .content {
-    min-height: 400px;
-    background: #ddd;
-    width: 400px;
-    float: left;
+    height: 75%;
+    background: gold;
 }
 
-.sidebar {
-    width: 200px;
-    float: right;
-    background: lightblue;
-    min-height: 400px;
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
 }
 
-.footer {
-    clear: both;
-    background: black;
-    height: 50px;
-    color: white;
-    text-align: center;
-    padding: 10px;
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%)
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.active {
+    background-color: gold; /* Add an active/current color */
 }
