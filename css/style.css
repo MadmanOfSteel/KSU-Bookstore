@@ -5,9 +5,8 @@
 }
 
 .heading {
-    height: 100px;
+    height: 125px;
     background: black;
-    padding: 20px;
     color: white;
     text-align: right;
 }
@@ -45,4 +44,9 @@
 
 .active {
     background-color: lightgrey; /* Add an active/current color */
+}
+
+.img-responsive {
+    float: left;
+    max-height: 50%;
 }
