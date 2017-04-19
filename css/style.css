@@ -50,3 +50,20 @@
     float: left;
     max-height: 50%;
 }
+
+#search_box {
+    margin-top: 10vh;
+}
+
+#search {
+    width: 50vw;
+    height: 8vh;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom:10vh;
+}
+
+#search_icon {
+    margin-right: 0;
+    padding-right: 0;
+}
