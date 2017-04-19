@@ -26,7 +26,25 @@
 
 
     <div class="content">
-        Main Content
+        <div id="search_box" class = "center-block text-center"
+        <section class="row" id="search_bar">
+            <div class = search_icon id="search_icon">
+                <img src="searchicon.png" alt = "Search Icon" style = "height:5vh; width: 5vh;">
+            </div>
+            <form class = search>
+                <input type="text" id="search" placeholder ="Enter Your Search Here...">
+            </form>
+            <div class="filter">
+                <label for="search_bar"> Search By:</label>
+                <select id="search_bar">
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                    <option value="professor">Professor</option>
+                    <option value="class">Class</option>
+                    <option value="ISBN">ISBN</option>
+                </select>
+            </div>
+        </section>
     </div>
 
 
