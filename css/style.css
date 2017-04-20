@@ -18,7 +18,7 @@
 }
 
 .content {
-    height: 75%;
+    height: 1000px;
     background: gold;
 }
 
@@ -52,35 +52,23 @@
 }
 
 #search_box {
-     margin-top: 10vh;
- }
+    padding: 25px;
+}
 
 #search {
-     width: 50vw;
-     height: 8vh;
-     margin-left: 0;
-     padding-left: 0;
-     margin-bottom:10vh;
- }
-
-#search_icon {
-    margin-right: 0;
-    padding-right: 0;
+     width: 67%;
+     height: 3vh;
  }
 
 .book-prices {
-
     text-align: center;
     background-color: white;
-
 }
 
-    .books-picture{
-        float: left;
+.books-picture {
+    float: left;
+}
 
-    }
-
-.book-info{
+.book-info {
     background-color: white;
-
 }
