@@ -32,7 +32,7 @@
     float: left; /* Float links side by side */
     text-align: center; /* Center-align text */
     width: 20%; /* Equal width (5 icons with 20% width each = 100%)
-    padding: 12px 0; /* Some top and bottom padding */
+     padding: 12px 0; /* Some top and bottom padding */
     transition: all 0.3s ease; /* Add transition for hover effects */
     color: white; /* White text color */
     font-size: 36px; /* Increased font size */
@@ -52,18 +52,35 @@
 }
 
 #search_box {
-    margin-top: 10vh;
-}
+     margin-top: 10vh;
+ }
 
 #search {
-    width: 50vw;
-    height: 8vh;
-    margin-left: 0;
-    padding-left: 0;
-    margin-bottom:10vh;
-}
+     width: 50vw;
+     height: 8vh;
+     margin-left: 0;
+     padding-left: 0;
+     margin-bottom:10vh;
+ }
 
 #search_icon {
     margin-right: 0;
     padding-right: 0;
+ }
+
+.book-prices {
+
+    text-align: center;
+    background-color: white;
+
+}
+
+    .books-picture{
+        float: left;
+
+    }
+
+.book-info{
+    background-color: white;
+
 }
