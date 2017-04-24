@@ -32,27 +32,28 @@
         </div>
 
         <div class="container">
-            <form class="form" name="frmName">
-                Username <input type="text" placeholder = "Username" name="username">
-                Password <input type="text" placeholder = "Password" name="password">
-                <input type="submit" value="Submit" >
+            <form name="login">
+                Username<input type="text" name="username"/>
+                Password<input type="password" name="pswrd"/>
+                <input type="button" onclick="check(this.form)" value="Login"/>
+
             </form>
 
         </div>
 
     <script type="text/javascript">
-        var user="testuser";
-        var pass="123456789"
-
-        //.click shows alert. need to find alternative
-        $('form').click(function(){
-            if ($('input[name=username]').val()==user && $('input[name=password]').val()==pass){
-                alert("You have successfully been logged on!");
+        function check(form)/*function to check userid & password*/
+        {
+            /*the following code checkes whether the entered userid and password are matching*/
+            if(form.username.value == "testuser" && form.pswrd.value == "123456789")
+            {
+                alert("You have successfully been logged on!")/*opens the target page while Id & password matches*/
             }
-            else{
-                alert("Username and/or password do not match");
+            else
+            {
+                alert("Incorrect username and/or password")/*displays error message*/
             }
-        });
+        }
 
         </script>
 
