@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kennesaw State University Online Bookstore</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="main.js"></script>
+    <script src="jQuery.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="heading">
+        <h1>KSU Online Bookstore</h1>
+        <img src="ksulogo.png" class="img-responsive">
+    </div>
+    <div class="navigation">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div class="icon-bar">
+            <a href="http://localhost:63342/SWEBookstore/index.html"><i class="fa fa-home"></i></a>
+            <a href="http://localhost:63342/SWEBookstore/Search.html"><i class="fa fa-search"></i></a>
+            <a href="http://localhost:63342/SWEBookstore/About.html"><i class="fa fa-question"></i></a>
+            <a class="active" href="http://localhost:63342/SWEBookstore/Cart.html"><i class="fa fa-shopping-cart"></i></a>
+            <a href="http://localhost:63342/SWEBookstore/Login.html"><i class="fa fa-male"></i></a>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <!-- Text box are for user to enter payment information -->
+        <div class="paymentInfo">
+            <h1>Payment Information</h1>
+
+            <form name = "myForm" onsubmit = "return validateForm()" method="post">
+                <font size="6" color="black">Customer Information</font>
+                <p>
+                    First Name  <input type="text" id="firstName" />
+                </p>
+                <p>
+                    Last Name   <input type="text" id="lastName" />
+                </p>
+                <p>
+                    Phone Number <input type="text" id="phoneNumber" />
+                </p>
+                <p>
+                    Email Address <input type="text" id="email" />
+
+
+
+
+                <p>
+                    <font size="6" color="black">Billing Information</font>
+                <p>
+                    First Name
+                    <input type="text" id="firstNameBI" />
+                </p>
+                <p>
+                    Last Name
+                    <input type="text" id="lastNameBI" />
+                </p>
+
+                <p>
+                    Street Address
+                    <input type="text" id="street" />
+                </p>
+
+                <p>
+                    City
+                    <input type="text" id="city" />
+                    <select>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AS">AS</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="DC">DC</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="GU">GU</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KA</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MH">MH</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="FM">FM</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="MP">MP</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PW">PW</option>
+                        <option value="PA">PA</option>
+                        <option value="PR">PR</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="VI">VI</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                    </select>
+
+
+                </p>
+
+                <p>
+                    Postal Code
+                    <input type="text" id="postalCode" />
+                </p>
+
+                Payment Method
+                <select>
+                    <option value="visa">Visa</option>
+                    <option value="mC">MasterCard</option>
+                    <option value="fAid">Financial Aid</option>
+                    <option value="paypal">Paypal</option>
+
+                </select>
+
+                <p>
+                    Credit Card Number
+                    <input type="text" id="cardNumber"
+                           maxlength="16"</p>
+
+                <p>
+                    Security Code
+                    <input type="text" id="securityCode"
+                           maxlength="3"</p>
+
+                <p>
+                    Expiration Date
+                    <select>
+                        <option value="january">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+
+                    </select>
+
+                    <select>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+
+                    </select>
+
+                <p>
+                    Shipping same as billing
+                    <input type="checkbox" id="sameShipping" value = "false" />
+
+
+        </div>
+        <!-- Button for checkout after all info has been entered -->
+
+
+        <div  id = "shippingInfo" class = "shipping">
+
+
+            <font size="6" color="black">Shipping Information</font>
+
+            <p>
+                First Name
+                <input type="text" id="firstNameSI" />
+            </p>
+            <p>
+                Last Name
+                <input type="text" id="lastNameSI" />
+            </p>
+
+            <p>
+                Street Address
+                <input type="text" id="streetSI" />
+            </p>
+
+            <p>
+                City
+                <input type="text" id="citySI" />
+                <select>
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AS">AS</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="DC">DC</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="GU">GU</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KA</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MH">MH</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="FM">FM</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="MP">MP</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PW">PW</option>
+                    <option value="PA">PA</option>
+                    <option value="PR">PR</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="VI">VI</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                </select>
+
+
+            </p>
+            <p>
+                Postal Code
+                <input type="text" id="postCode" />
+            </p>
+        </div>
+
+        <input type = "submit" value ="Submit">
+
+    </div>
+</div>
+
+
+</div>
+</div>
+</form>
+<script type="text/javascript">
+    //make shipping info disappear if shipping is same as billing
+    $(document).ready(function() {
+        $('#sameShipping').change(function() {
+            $('#shippingInfo').toggle();
+        });
+    });
+
+    function validateForm() {
+
+       //customer information validation
+
+        var a=document.forms["myForm"]["firstName"].value;
+        if (a==null || a=="")
+        {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+
+        var b=document.forms["myForm"]["lastName"].value;
+        if (b==null || b=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var c=document.forms["myForm"]["phoneNumber"].value;
+        if (c==null || c=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var d=document.forms["myForm"]["email"].value;
+        if (d==null || d=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+
+       //billing information validation
+        var e=document.forms["myForm"]["firstNameBI"].value;
+        if (e==null || e=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var f=document.forms["myForm"]["lastNameBI"].value;
+        if (f==null || f=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var g=document.forms["myForm"]["street"].value;
+        if (g==null || g=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var h=document.forms["myForm"]["city"].value;
+        if (h==null || h=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var i=document.forms["myForm"]["postalCode"].value;
+        if (i==null || i=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var j=document.forms["myForm"]["cardNumber"].value;
+        if (j==null || j=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var k=document.forms["myForm"]["securityCode"].value;
+        if (k==null || k=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+
+       //shipping field validation
+        var l=document.forms["myForm"]["firstNameSI"].value;
+        if (document.getElementById("sameShipping").checked == false && l==null || l=="") {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+    }
+</script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
