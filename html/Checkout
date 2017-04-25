@@ -371,10 +371,12 @@
 
        //shipping field validation
         var l=document.forms["myForm"]["firstNameSI"].value;
-        if (document.getElementById("sameShipping").checked == false && l==null || l=="") {
+        if (document.getElementById("sameShipping").checked != true && l==null || l=="") {
             alert("Make sure all fields are complete");
             return false;
         }
+        else
+            return true;
     }
 </script>
 
