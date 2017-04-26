@@ -141,24 +141,24 @@
                     <input type="text" id="postalCode" />
                 </p>
 
+
                 Payment Method
-                <select>
+                <select >
                     <option value="visa">Visa</option>
                     <option value="mC">MasterCard</option>
-                    <option value="fAid">Financial Aid</option>
-                    <option value="paypal">Paypal</option>
+
 
                 </select>
 
                 <p>
                     Credit Card Number
-                    <input type="text" id="cardNumber"
-                           maxlength="16"</p>
+                    <input type="text" id="cardNumber" value = "****************"/>
+                           </p>
 
                 <p>
                     Security Code
-                    <input type="text" id="securityCode"
-                           maxlength="3"</p>
+                    <input type="text" id="securityCode" value = "***"/>
+                           </p>
 
                 <p>
                     Expiration Date
@@ -189,7 +189,18 @@
 
                 <p>
                     Shipping same as billing
-                    <input type="checkbox" id="sameShipping" value = "false" />
+                    <input type="checkbox"  id="sameShipping" value = "false" />
+
+               <p> Please select if paying with Paypal or Financial Aid
+                <select id = "dropdown">
+                    <option value="selection">--Select--</option>
+                    <option value="paypal">Paypal</option>
+                    <option value="fAid">Financial Aid</option>
+
+
+                </select>
+              
+
 
 
         </div>
@@ -305,6 +316,13 @@
         });
     });
 
+    var paypal = document.getElementById("dropdown");
+    dropdown.onchange = function(event){
+        if(dropdown.value=="paypal" || dropdown.value == "fAid"){
+
+        }
+
+    }
     function validateForm() {
 
        //customer information validation
@@ -359,25 +377,24 @@
             return false;
         }
         var j=document.forms["myForm"]["cardNumber"].value;
-        if (j==null || j=="") {
-            alert("Make sure all fields are complete");
-            return false;
-        }
+        if (j == null || j == "" || j.length < 16 || j.length > 16) {
+                    alert("Make sure all fields are complete");
+                    return false;
+                }
+
+
         var k=document.forms["myForm"]["securityCode"].value;
-        if (k==null || k=="") {
+        if (k==null || k=="" || k.length < 3 || k.length > 3) {
             alert("Make sure all fields are complete");
             return false;
         }
 
        //shipping field validation
-        var l=document.forms["myForm"]["firstNameSI"].value;
-        if (document.getElementById("sameShipping").checked != true && l==null || l=="") {
-            alert("Make sure all fields are complete");
-            return false;
-        }
-        else
-            return true;
+
     }
+
+
+
 </script>
 
 </body>
