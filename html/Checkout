@@ -346,8 +346,9 @@ return true;
             $('#shippingInfo').toggle();
         });
     });
+    </script>
 
-
+<script type="text/javascript">
 
     }
     function validateForm() {
