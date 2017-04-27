@@ -108,3 +108,36 @@
 }
 
 
+.cart-information{
+    background-color: white;
+    float: none;
+    text-align: left;
+    font-size: 30px;
+    border-bottom: 100px;
+    border-bottom-color: black;
+    margin-bottom: 10px;
+}
+
+
+hr{
+    background-color: white;
+}
+
+.cart-picture {
+    float: left;
+    border-bottom: 6px black;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+
+.cart-right{
+    margin: 10px;
+    width: 300px;
+    border-width: medium;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+    float: right;
+    background-color: white;
+}
