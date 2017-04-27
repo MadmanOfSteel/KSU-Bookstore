@@ -152,12 +152,13 @@
 
                 <p>
                     Credit Card Number
-                    <input type="text" id="cardNumber" value = "****************"/>
+                    <input type="text" id="cardNumber" value = "****************" maxlength="16" onkeypress="return isNumber(event)"/>
+
                            </p>
 
                 <p>
                     Security Code
-                    <input type="text" id="securityCode" value = "***"/>
+                    <input type="text" id="securityCode" value = "***" maxlength="3" onkeypress="return isNumber(event)"/>
                            </p>
 
                 <p>
@@ -188,19 +189,22 @@
                     </select>
 
                 <p>
-                    Shipping same as billing
-                    <input type="checkbox"  id="sameShipping" value = "false" />
+
 
                <p> Please select if paying with Paypal or Financial Aid
-                <select id = "dropdown">
-                    <option value="selection">--Select--</option>
-                    <option value="paypal">Paypal</option>
-                    <option value="fAid">Financial Aid</option>
+                <div>
+                    <select>
+                        <option>--Select--</option>
+                        <option value="red">Paypal</option>
+                        <option value="green">Financial Aid</option>
+                    </select>
+                </div>
+                <div class="red box">Username: <input type="text" id="username1" value="Username@email.com"> <p></p>Password: <input type="text" id="password1" value="123456789"></div>
+                <div class="green box">Username: <input type="textbox" id="username2" value="Username@email.com"> <p></p>Password: <input type="text" id="password2" value="123456789"></div>
 
 
-                </select>
-              
-
+                Shipping same as billing
+                <input type="checkbox"  id="sameShipping" value = "false" />
 
 
         </div>
@@ -308,7 +312,34 @@
 </div>
 </div>
 </form>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript">
+    $(document).ready(function(){
+        $("select").change(function(){
+            $(this).find("option:selected").each(function(){
+                var optionValue = $(this).attr("value");
+                if(optionValue){
+                    $(".box").not("." + optionValue).hide();
+                    $("." + optionValue).show();
+                } else{
+                    $(".box").hide();
+                }
+            });
+        }).change();
+    });
+</script>
+<script type="text/javascript">
+function isNumber(evt) {
+evt = (evt) ? evt : window.event;
+var charCode = (evt.which) ? evt.which : evt.keyCode;
+if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+return false;
+}
+return true;
+}
+</script>
+<script type="text/javascript">
+
     //make shipping info disappear if shipping is same as billing
     $(document).ready(function() {
         $('#sameShipping').change(function() {
@@ -316,11 +347,7 @@
         });
     });
 
-    var paypal = document.getElementById("dropdown");
-    dropdown.onchange = function(event){
-        if(dropdown.value=="paypal" || dropdown.value == "fAid"){
 
-        }
 
     }
     function validateForm() {
@@ -384,10 +411,33 @@
 
 
         var k=document.forms["myForm"]["securityCode"].value;
-        if (k==null || k=="" || k.length < 3 || k.length > 3) {
+        if (k==null || k=="" || k.length < 3 || k.length > 3 || k != "777" ) {
             alert("Make sure all fields are complete");
             return false;
         }
+
+        var l= document.forms["myForm"]["password1"].value;
+        if (l==null || l=="" || l != "123456789" ) {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+        var m= document.forms["myForm"]["password1"].value;
+        if (m==null || m=="" || m != "123456789" ) {
+            alert("Make sure all fields are complete");
+            return false;
+        }
+
+        function pay(form) {
+            var element = document.getElementById('username');
+            if(val== "--Select--"){
+                element.style.display='block';
+            }
+            else
+                element.style.display='none';
+
+        }
+
+
 
        //shipping field validation
 
