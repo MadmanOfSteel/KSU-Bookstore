@@ -28,283 +28,43 @@
     </div>
 
 
-    <div class="content">
-        <!-- Text box are for user to enter payment information -->
-        <div class="paymentInfo">
-            <h1>Payment Information</h1>
-            <form>
-                <fieldset>
-                    <legend>Customer Information</legend>
-                    <p>
-                        <label>First Name</label>
-                        <input type="text" id="firstName" />
-                    </p>
-                    <p>
-                        <label>Last Name</label>
-                        <input type="text" id="lastName" />
-                    </p>
-                    <p>
-                        <label>Phone Number</label>
-                        <input type="text" id="phoneNumber" />
-                    </p>
-                    <p>
-                        <label>Email Address</label>
-                        <input type="text" id="email" />
-                </fieldset>
-            </form>
-            <form>
-                <fieldset>
-
-                    <legend>Billing Information</legend>
-                    <p>
-                        <label>First Name</label>
-                        <input type="text" id="firstNameBI" />
-                    </p>
-                    <p>
-                        <label>Last Name</label>
-                        <input type="text" id="lastNameBI" />
-                    </p>
-
-                    <p>
-                        <label> Street Address</label>
-                        <input type="text" id="street" />
-                    </p>
-
-                    <p>
-                        <label> City</label>
-                        <input type="text" id="city" />
-                        <select>
-                            <option value="AL">AL</option>
-                            <option value="AK">AK</option>
-                            <option value="AS">AS</option>
-                            <option value="AZ">AZ</option>
-                            <option value="AR">AR</option>
-                            <option value="CA">CA</option>
-                            <option value="CO">CO</option>
-                            <option value="CT">CT</option>
-                            <option value="DE">DE</option>
-                            <option value="DC">DC</option>
-                            <option value="FL">FL</option>
-                            <option value="GA">GA</option>
-                            <option value="GU">GU</option>
-                            <option value="HI">HI</option>
-                            <option value="ID">ID</option>
-                            <option value="IL">IL</option>
-                            <option value="IN">IN</option>
-                            <option value="IA">IA</option>
-                            <option value="KS">KA</option>
-                            <option value="KY">KY</option>
-                            <option value="LA">LA</option>
-                            <option value="ME">ME</option>
-                            <option value="MD">MD</option>
-                            <option value="MH">MH</option>
-                            <option value="MA">MA</option>
-                            <option value="MI">MI</option>
-                            <option value="FM">FM</option>
-                            <option value="MN">MN</option>
-                            <option value="MS">MS</option>
-                            <option value="MO">MO</option>
-                            <option value="MT">MT</option>
-                            <option value="NE">NE</option>
-                            <option value="NV">NV</option>
-                            <option value="NH">NH</option>
-                            <option value="NJ">NJ</option>
-                            <option value="NM">NM</option>
-                            <option value="NY">NY</option>
-                            <option value="NC">NC</option>
-                            <option value="ND">ND</option>
-                            <option value="MP">MP</option>
-                            <option value="OH">OH</option>
-                            <option value="OK">OK</option>
-                            <option value="OR">OR</option>
-                            <option value="PW">PW</option>
-                            <option value="PA">PA</option>
-                            <option value="PR">PR</option>
-                            <option value="RI">RI</option>
-                            <option value="SC">SC</option>
-                            <option value="SD">SD</option>
-                            <option value="TN">TN</option>
-                            <option value="TX">TX</option>
-                            <option value="UT">UT</option>
-                            <option value="VT">VT</option>
-                            <option value="VA">VA</option>
-                            <option value="VI">VI</option>
-                            <option value="WA">WA</option>
-                            <option value="WV">WV</option>
-                            <option value="WI">WI</option>
-                            <option value="WY">WY</option>
-                        </select>
-
-
-                    </p>
-
-                    <p>
-                        <label> Postal Code </label>
-                        <input type="text" id="postalCode" />
-                    </p>
-
-                    <label>Payment Method</label>
-                    <select>
-                        <option value="visa">Visa</option>
-                        <option value="mC">MasterCard</option>
-                        <option value="fAid">Financial Aid</option>
-                        <option value="paypal">Paypal</option>
-
-                    </select>
-
-                    <p>
-                        <label> Credit Card Number </label>
-                        <input type="text" id="cardNumber" </p>
-
-                    <p>
-                        <label> Security Code </label>
-                        <input type="text" id="securityCode" </p>
-
-                    <p>
-                        <label> Expiration Date </label>
-                        <select>
-                            <option value="january">January</option>
-                            <option value="february">February</option>
-                            <option value="march">March</option>
-                            <option value="april">April</option>
-                            <option value="may">May</option>
-                            <option value="june">June</option>
-                            <option value="july">July</option>
-                            <option value="august">August</option>
-                            <option value="october">October</option>
-                            <option value="november">November</option>
-                            <option value="december">December</option>
-
-                        </select>
-
-
-                        <select>
-                            <option value="2018">2018</option>
-                            <option value="2019">2019</option>
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-
-                        </select>
-
-                    </p>
-
-
-                    Shipping same as billing </label>
-                    <input type="checkbox" id="sameShipping" />
-
-                </fieldset>
-            </form>
-        </div>
-        <!-- Button for checkout after all info has been entered -->
-
-
-        <div class="shipping">
-            <form>
-                <fieldset>
-                    <legend>Shipping Information</legend>
-                    <p>
-                        <label>First Name</label>
-                        <input type="text" id="firstNameBI" />
-                    </p>
-                    <p>
-                        <label>Last Name</label>
-                        <input type="text" id="lastNameBI" />
-                    </p>
-
-                    <p>
-                        <label> Street Address</label>
-                        <input type="text" id="street" />
-                    </p>
-
-                    <p>
-                        <label> City</label>
-                        <input type="text" id="city" />
-                        <select>
-                            <option value="AL">AL</option>
-                            <option value="AK">AK</option>
-                            <option value="AS">AS</option>
-                            <option value="AZ">AZ</option>
-                            <option value="AR">AR</option>
-                            <option value="CA">CA</option>
-                            <option value="CO">CO</option>
-                            <option value="CT">CT</option>
-                            <option value="DE">DE</option>
-                            <option value="DC">DC</option>
-                            <option value="FL">FL</option>
-                            <option value="GA">GA</option>
-                            <option value="GU">GU</option>
-                            <option value="HI">HI</option>
-                            <option value="ID">ID</option>
-                            <option value="IL">IL</option>
-                            <option value="IN">IN</option>
-                            <option value="IA">IA</option>
-                            <option value="KS">KA</option>
-                            <option value="KY">KY</option>
-                            <option value="LA">LA</option>
-                            <option value="ME">ME</option>
-                            <option value="MD">MD</option>
-                            <option value="MH">MH</option>
-                            <option value="MA">MA</option>
-                            <option value="MI">MI</option>
-                            <option value="FM">FM</option>
-                            <option value="MN">MN</option>
-                            <option value="MS">MS</option>
-                            <option value="MO">MO</option>
-                            <option value="MT">MT</option>
-                            <option value="NE">NE</option>
-                            <option value="NV">NV</option>
-                            <option value="NH">NH</option>
-                            <option value="NJ">NJ</option>
-                            <option value="NM">NM</option>
-                            <option value="NY">NY</option>
-                            <option value="NC">NC</option>
-                            <option value="ND">ND</option>
-                            <option value="MP">MP</option>
-                            <option value="OH">OH</option>
-                            <option value="OK">OK</option>
-                            <option value="OR">OR</option>
-                            <option value="PW">PW</option>
-                            <option value="PA">PA</option>
-                            <option value="PR">PR</option>
-                            <option value="RI">RI</option>
-                            <option value="SC">SC</option>
-                            <option value="SD">SD</option>
-                            <option value="TN">TN</option>
-                            <option value="TX">TX</option>
-                            <option value="UT">UT</option>
-                            <option value="VT">VT</option>
-                            <option value="VA">VA</option>
-                            <option value="VI">VI</option>
-                            <option value="WA">WA</option>
-                            <option value="WV">WV</option>
-                            <option value="WI">WI</option>
-                            <option value="WY">WY</option>
-                        </select>
-
-
-                    </p>
-                    <p>
-                        <label> Postal Code </label>
-                        <input type="text" id="postalCode" />
-                    </p>
+    <div class="cart-picture">
+            <img src="CoverPhotos/978-0073376356.jpg" style="width: 180px; height: 250px;">
         </div>
 
-        <div class="checkoutButton" <button type="button">Checkout </button>
+    <br>
+    <br>
+    <hr>
+
+        <div class="cart-information">
+            <ul style="list-style-type:none">
+                <li>(Insert Title)</li>
+                <li>(Insert Author)</li>
+                <li>(Insert Quantity)</li>
+                <li>(Insert Price)</li>
+            </ul>
+        </div>
+
+
+
+    <br>
+    <br>
+    <hr>
+
+    <div class="cart-right">
+        <h1>Totals</h1>
+        <ul style="list-style-type:none">
+        <li>Total..........</li>
+        <li>Taxes..........</li>
+        <li>Shipping.......</li>
+        <li>Subtotal.......</li>
+        </ul>
+
 
     </div>
-</div>
 
 
 </div>
-</div>
-
-
-
-</body>
-
-</html>
 
 </body>
 </html>
